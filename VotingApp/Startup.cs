@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using VotingApp.Models;
+using VotingApp.Repository;
 
 namespace VotingApp
 {
@@ -30,6 +31,7 @@ namespace VotingApp
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+            services.AddScoped<ICandidateRepository, CandidateRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

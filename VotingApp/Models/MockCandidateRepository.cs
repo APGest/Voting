@@ -8,6 +8,15 @@ namespace VotingApp.Models
     public class MockCandidateRepository : ICandidateRepository
     {
         private List<Candidate> _candidates;
+        public MockCandidateRepository()
+        {
+            _candidates = new List<Candidate>()
+            {
+                new Candidate(){Id = 1, Name = "PiotrusPan"},
+            new Candidate() { Id = 1, Name = "PiotrusPan" },
+            new Candidate() { Id = 1, Name = "PiotrusPan" }
+        };
+        }
         public void AddCandidate(Candidate candidate)
         {
             candidate.Id = _candidates.Max(c => c.Id) + 1;
