@@ -16,7 +16,7 @@ namespace VotingApp.Controllers
 
         [HttpGet]
         [Route("{id}")]
-        public IActionResult GetCandidate(int id)
+        public IActionResult GetVoter(int id)
         {
             return Ok(_voterRepository.GetVoter(id));
         }
