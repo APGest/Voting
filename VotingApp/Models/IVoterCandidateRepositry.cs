@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace VotingApp.Models
 {
-    public class Voter
+    public interface IVoterCandidateRepository
     {
-        public string Name { get; set; }
-        public int Id { get; set; }
+        void Vote(VoterCandidate voterCandidate);
     }
 }

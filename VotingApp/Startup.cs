@@ -31,6 +31,7 @@ namespace VotingApp
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+            
             services.AddScoped<ICandidateRepository, CandidateRepository>();
         }
 
@@ -59,9 +60,8 @@ namespace VotingApp
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller}/{action=Index}/{id?}");
+                endpoints.MapControllers();
+              
             });
 
             app.UseSpa(spa =>
