@@ -44,6 +44,11 @@ namespace VotingApp.Models
                 VoterId = 1,
                 CandidateId = 1,
             });
+            modelBuilder.Entity<VoterCandidate>().HasData(new VoterCandidate
+            {
+                VoterId = 1,
+                CandidateId = 2,
+            });
         }
     }
 }

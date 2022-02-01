@@ -10,11 +10,12 @@ namespace VotingApp.Models
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
-
         }
+
         public DbSet<Voter> Voters { get; set; }
         public DbSet<Candidate> Candidates { get; set; }
         public DbSet<VoterCandidate> VoterCandidates { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.SeedCandidate();

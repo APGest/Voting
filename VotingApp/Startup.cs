@@ -25,6 +25,7 @@ namespace VotingApp
         {
             
             services.AddControllersWithViews();
+            services.AddDirectoryBrowser();
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("VotingConnection")));
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -33,6 +34,8 @@ namespace VotingApp
             });
             
             services.AddScoped<ICandidateRepository, CandidateRepository>();
+            services.AddScoped<IVoterCandidateRepository, VoterCandidateRepository>();
+            services.AddScoped<IVoterRepository, VoterRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
