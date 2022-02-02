@@ -14,4 +14,15 @@
   <td>{{com.id}}</td>
 </tr>
 </table>
+<table>
+  <tr><th>Candidates</th></tr>
+  <tr>
+  <th>Name</th>
+  <th>Id</th>
+  </tr>
+<tr *ngFor='let com of candidates'>
+<td>{{com.name}}</td>
+<td>{{com.id}}</td>
+</tr>
+</table>
 </body>

@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { voterServices } from './services/voter-services';
+import { candidateServices } from './services/candidate-services';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { voterServices } from './services/voter-services';
       { path: 'fetch-data', component: FetchDataComponent },
     ])
   ],
-  providers: [voterServices],
+  providers: [voterServices, candidateServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

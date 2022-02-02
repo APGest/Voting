@@ -1,5 +1,6 @@
-export class Voter
-{
-name : string;
-id : number;
+export class Voter {
+
+name: string;
+id: number;
+
 }
