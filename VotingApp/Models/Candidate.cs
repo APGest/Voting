@@ -9,5 +9,6 @@ namespace VotingApp.Models
     {
         public string Name { get; set; }
         public int Id { get; set; }
+        public List<Voter> VoterList { get; set; } = new List<Voter>();
     }
 }

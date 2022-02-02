@@ -11,14 +11,14 @@ namespace VotingApp.Repository
         {
             _context = context;
         }
-        public void Vote(VoterCandidate voterCandidate)
-        {
-          _context.Add(voterCandidate);
-        }
+        //public void Vote(VoterCandidate voterCandidate)
+        //{
+        //  _context.Add(voterCandidate);
+        //}
 
-        public IEnumerable<VoterCandidate> GetAll()
-        {
-            return _context.VoterCandidates;
-        }
+        //public IEnumerable<VoterCandidate> GetAll()
+        //{
+        //    return _context.VoterCandidates;
+        //}
     }
 }

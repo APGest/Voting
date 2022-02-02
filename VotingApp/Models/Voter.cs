@@ -9,5 +9,6 @@ namespace VotingApp.Models
     {
         public string Name { get; set; }
         public int Id { get; set; }
+        public Candidate Candidate { get; set; }
     }
 }

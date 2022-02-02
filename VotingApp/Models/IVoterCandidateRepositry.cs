@@ -7,8 +7,8 @@ namespace VotingApp.Models
 {
     public interface IVoterCandidateRepository
     {
-        void Vote(VoterCandidate voterCandidate);
+        //void Vote(VoterCandidate voterCandidate);
 
-        IEnumerable<VoterCandidate> GetAll();
+        //IEnumerable<VoterCandidate> GetAll();
     }
 }

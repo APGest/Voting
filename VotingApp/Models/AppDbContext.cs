@@ -14,13 +14,11 @@ namespace VotingApp.Models
 
         public DbSet<Voter> Voters { get; set; }
         public DbSet<Candidate> Candidates { get; set; }
-        public DbSet<VoterCandidate> VoterCandidates { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.SeedCandidate();
             modelBuilder.SeedVoter();
-            modelBuilder.SeedVoterCandidate();
         }
 
     }
