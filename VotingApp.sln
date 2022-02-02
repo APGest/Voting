@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30517.126
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VotingApp", "VotingApp\VotingApp.csproj", "{29195B7F-5E9F-4F3A-9FF7-404EAF8F4869}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VotingApp", "VotingApp\VotingApp.csproj", "{29195B7F-5E9F-4F3A-9FF7-404EAF8F4869}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{D8C3FE01-7B0B-4A62-9545-A45642F72A72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{29195B7F-5E9F-4F3A-9FF7-404EAF8F4869}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29195B7F-5E9F-4F3A-9FF7-404EAF8F4869}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29195B7F-5E9F-4F3A-9FF7-404EAF8F4869}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8C3FE01-7B0B-4A62-9545-A45642F72A72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8C3FE01-7B0B-4A62-9545-A45642F72A72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8C3FE01-7B0B-4A62-9545-A45642F72A72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8C3FE01-7B0B-4A62-9545-A45642F72A72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
