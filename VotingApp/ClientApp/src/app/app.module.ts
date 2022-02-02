@@ -11,6 +11,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { voterServices } from './services/voter-services';
 import { candidateServices } from './services/candidate-services';
+import { voterCandidateServices } from './services/voterCandidate-services';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { candidateServices } from './services/candidate-services';
       { path: 'fetch-data', component: FetchDataComponent },
     ])
   ],
-  providers: [voterServices, candidateServices],
+  providers: [voterServices, candidateServices, voterCandidateServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

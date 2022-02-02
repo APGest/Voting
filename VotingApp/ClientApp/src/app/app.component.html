@@ -25,4 +25,15 @@
 <td>{{com.id}}</td>
 </tr>
 </table>
+<table>
+  <tr><th>VoterCandidates</th></tr>
+  <tr>
+  <th>Name</th>
+  <th>Id</th>
+  </tr>
+<tr *ngFor='let voterCandidate of voterCandidates'>
+<td>{{voterCandidate.voterId}}</td>
+<td>{{VoterCandidate.candidateId}}</td>
+</tr>
+</table>
 </body>
