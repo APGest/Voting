@@ -17,8 +17,7 @@ namespace VotingApp.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.SeedCandidate();
-            modelBuilder.SeedVoter();
+            modelBuilder.Entity<Candidate>().HasMany(v => v.VoterList).WithOne(c => c.Candidate);
         }
 
     }

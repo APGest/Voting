@@ -79,6 +79,11 @@ namespace VotingApp
                     spa.UseAngularCliServer(npmScript: "start");
                 }
             });
+
+            using var scope = app.ApplicationServices.CreateScope();
+            var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+            if (!dbContext.Database.IsSqlServer()) return;
+            dbContext.Database.Migrate();
         }
     }
 }

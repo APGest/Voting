@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using VotingApp.Models;
 
 namespace VotingApp.Repository
@@ -21,9 +22,16 @@ namespace VotingApp.Repository
             context.SaveChanges();
         }
 
+        public void Update(Voter voter)
+        {
+            context.Update(voter);
+            context.SaveChanges();
+        }
+
+
         public IEnumerable<Voter> GelAllVoters()
         {
-            return context.Voters;
+            return context.Voters.Include(x => x.Candidate);
         }
 
         public Voter GetVoter(int id)

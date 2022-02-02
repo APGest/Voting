@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 using VotingApp.Models;
 
 namespace VotingApp.Repository
@@ -20,7 +21,7 @@ namespace VotingApp.Repository
 
         public IEnumerable<Candidate> GelAllCandidates()
         {
-            return context.Candidates;
+            return context.Candidates.Include(x=>x.VoterList);
         }
 
         public Candidate GetCandidate(int id)

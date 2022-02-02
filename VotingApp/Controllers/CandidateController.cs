@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Linq;
+using Microsoft.AspNetCore.Mvc;
 using VotingApp.Models;
 using VotingApp.Repository;
 
@@ -25,7 +26,15 @@ namespace VotingApp.Controllers
         [Route("GetAll")]
         public IActionResult GetCandidates()
         {
-            return Ok(_candidateRepository.GelAllCandidates());
+            var candidates = _candidateRepository.GelAllCandidates();
+            var mapped = candidates.Select(x => new CandidateSummary
+            {
+                Id = x.Id,
+                Name = x.Name,
+                Votes = x.VoterList?.Count ?? 0
+            });
+
+            return Ok(mapped);
         }
         [HttpPost]
         [Route("Add")]

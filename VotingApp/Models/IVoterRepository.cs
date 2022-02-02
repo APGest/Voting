@@ -10,5 +10,6 @@ namespace VotingApp.Models
         Voter GetVoter(int id);
         IEnumerable<Voter> GelAllVoters();
         void AddVoter(Voter voter);
+        void Update(Voter voter);
     }
 }
