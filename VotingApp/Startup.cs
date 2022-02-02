@@ -23,7 +23,6 @@ namespace VotingApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
             services.AddControllersWithViews();
             services.AddDirectoryBrowser();
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("VotingConnection")));
@@ -33,8 +32,7 @@ namespace VotingApp
                 configuration.RootPath = "ClientApp/dist";
             });
             
-            services.AddScoped<ICandidateRepository, CandidateRepository>();
-            services.AddScoped<IVoterCandidateRepository, VoterCandidateRepository>();
+            services.AddScoped<ICandidateRepository, CandidateRepository>();           
             services.AddScoped<IVoterRepository, VoterRepository>();
         }
 

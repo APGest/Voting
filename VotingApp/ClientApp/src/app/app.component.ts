@@ -3,8 +3,6 @@ import { voterServices } from "./services/voter-services";
 import { Voter } from "./models/Voter";
 import { candidateServices } from "./services/candidate-services";
 import { Candidate } from "./models/Candidate";
-import { voterCandidate } from "./models/voterCandidate"
-import { voterCandidateServices} from './services/voterCandidate-services'
 
 @Component({
   selector: "app-root",

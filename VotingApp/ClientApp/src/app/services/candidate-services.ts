@@ -6,6 +6,6 @@ import { HttpClient } from "@angular/common/http";
 export class candidateServices  {
     constructor(private httpclient: HttpClient ) {}
  getCandidates(): Observable<any>{
-     return this.httpclient.get('https://localhost:44308/api/candidate/getall');
+     return this.httpclient.get('https://localhost:5001/api/candidate/getall');
  }
 }

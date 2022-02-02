@@ -6,6 +6,6 @@ import { HttpClient } from "@angular/common/http";
 export class voterServices{
     constructor(private httpclient: HttpClient ) {}
  getVoters(): Observable<any>{
-     return this.httpclient.get('https://localhost:44308/api/voter/getall');
+     return this.httpclient.get('https://localhost:5001/api/voter/getall');
  }
 }
