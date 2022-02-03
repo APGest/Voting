@@ -25,13 +25,13 @@ namespace VotingApp
         {
             services.AddControllersWithViews();
             services.AddDirectoryBrowser();
+            //services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase(Configuration.GetConnectionString("VotingConnection")));
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("VotingConnection")));
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/dist";
             });
-            
             services.AddScoped<ICandidateRepository, CandidateRepository>();           
             services.AddScoped<IVoterRepository, VoterRepository>();
         }
