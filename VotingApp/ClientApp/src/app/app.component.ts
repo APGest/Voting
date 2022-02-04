@@ -1,8 +1,8 @@
 import { Component } from "@angular/core";
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { voterServices } from "./services/voter-services";
+import { voterServices } from "./services/voter-service";
 import { Voter } from "./models/Voter";
-import { candidateServices } from "./services/candidate-services";
+import { CandidateServices } from "./services/candidate-service";
 import { Candidate } from "./models/Candidate";
 
 @Component({
@@ -12,9 +12,10 @@ import { Candidate } from "./models/Candidate";
 export class AppComponent {
   title = "app";
 
-  constructor(private _voterServices: voterServices, private _candidateServices: candidateServices) {
+  constructor(private _voterServices: voterServices, private _candidateServices: CandidateServices) {
 
   }
+  
   candidateName: string;
   voterName: string;
   voters: Voter[];
@@ -22,7 +23,12 @@ export class AppComponent {
   form = new FormGroup({
     candidate: new FormControl('', Validators.required),
     voter: new FormControl('', Validators.required),
+   
   });
+
+  sprawdzenie = new FormGroup({
+   
+  })
   get f() {
     return this.form.controls;
   }

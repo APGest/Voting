@@ -1,0 +1,21 @@
+<p>candidate-view works!</p>
+<div class="container">
+    <table class='table table-striped' aria-labelledby="tableLabel">
+        <thead>
+            <tr>
+                <th>Candidate</th>
+                <th>Id</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let candidate of candidates">
+                <td>{{candidate.name}}</td>
+                <td>{{candidate.id}}</td>
+            </tr>
+            <div class="input-group">
+                <input type="text" name="candidateName" id="candidateName" #candidateName class="form-control" placeholder="Please provide new candidate name">
+                <button class="btn btn-primary" (click)="AddCandidate(candidateName.value)">Add Candidate</button>
+            </div>
+        </tbody>
+    </table>
+    <br>
